@@ -55,7 +55,7 @@ export default class UpdateCourse extends Component {
       userInfo,
       errors
     } = this.state;
-
+    
     return(
       <div className="wrap">
         <h2>Update Course</h2>
@@ -125,7 +125,6 @@ export default class UpdateCourse extends Component {
     const { context } = this.props;
     const { match } = this.props;
 		const authUser = context.authenticatedUser;
-		const userId = authUser.id;
 
     const { 
       title, 
@@ -140,9 +139,9 @@ export default class UpdateCourse extends Component {
       description,
       estimatedTime,
       materialsNeeded,
-      userId
     };
 
+    console.log('Auth user UC: ' + authUser.emailAddress + " password: " + authUser.password);
     //update course
     context.data.updateCourse(course, match.params.id, authUser.emailAddress, authUser.password)
     .then(errors => {
