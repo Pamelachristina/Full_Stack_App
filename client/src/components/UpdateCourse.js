@@ -141,7 +141,7 @@ export default class UpdateCourse extends Component {
       materialsNeeded,
     };
 
-    console.log('Auth user UC: ' + authUser.emailAddress + " password: " + authUser.password);
+    //console.log('Auth user UC: ' + authUser.emailAddress + " password: " + authUser.password);
     //update course
     context.data.updateCourse(course, match.params.id, authUser.emailAddress, authUser.password)
     .then(errors => {

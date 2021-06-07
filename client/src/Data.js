@@ -22,8 +22,8 @@ export default class Data {
     return fetch(url, options);
   }
 
-  async getUser(username, password) {
-    const response = await this.api(`/users`, 'GET', null, true, { username, password });
+  async getUser(emailAddress, password) {
+    const response = await this.api(`/users`, 'GET', null, true, {emailAddress, password });
     if (response.status === 200) {
       return response.json().then(data => data);
     }
@@ -97,7 +97,7 @@ export default class Data {
   // PUT updates course
   async updateCourse(course, id, emailAddress, password) {
     console.log(emailAddress);
-    console.log(password);
+    //console.log(password);
     const response = await this.api(`/courses/${id}`, 'PUT', course, true, { emailAddress, password });
     if (response.status === 204) {
       return [];
