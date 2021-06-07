@@ -99,7 +99,7 @@ export default class Data {
     console.log(emailAddress);
     //console.log(password);
     const response = await this.api(`/courses/${id}`, 'PUT', course, true, { emailAddress, password });
-    if (response.status === 204) {
+    if (response.status === 201) {
       return [];
     }
     else if (response.status === 400) {
@@ -115,7 +115,7 @@ export default class Data {
   //DELETE course
   async deleteCourse(id, emailAddress, password){
     const response = await this.api(`/courses/${id}`, 'DELETE', null, true, { emailAddress, password });
-    if(response.status === 204) {
+    if(response.status === 201) {
       return [];
     }
     else if (response.status === 400) {
