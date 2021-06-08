@@ -96,6 +96,7 @@ export class courseDetail extends Component {
       const { context } = this.props;
       const { match } = this.props;
       const authUser = context.authenticatedUser;
+     
       context.data.deleteCourse(match.params.id, authUser.emailAddress, authUser.password)
       .then(errors => {
         if(errors.length){
@@ -103,6 +104,7 @@ export class courseDetail extends Component {
         } else {
           console.log(`course deleted`);
           this.props.history.push("/");
+          window.location.reload();
         }
       })
       .catch(err => {
