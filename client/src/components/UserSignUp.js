@@ -71,6 +71,16 @@ export default class UserSignUp extends Component {
                   value={password} 
                   onChange={this.change} />
               </label>
+
+              <label>Confirm Password
+                <input 
+                  id="confirmPassword" 
+                  name="confirmPassword"
+                  type="password"
+                  value={password} 
+                  onChange={this.change} />
+              </label>
+              
             </React.Fragment>
           )} />
         <p>
@@ -95,7 +105,7 @@ export default class UserSignUp extends Component {
     const { context } = this.props;
     const { firstName, lastName, emailAddress, password } = this.state;
 
-    //new user info object using shorthand syntax
+    //new user info object 
     const user = {
       firstName,
       lastName,
