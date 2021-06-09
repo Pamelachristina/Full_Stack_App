@@ -55,18 +55,20 @@ export class courseDetail extends Component {
         <React.Fragment>
             <div className="actions--bar">
               <div className="wrap">
-                {
-                  (authUser && course.userId === authUser.id)?
+                
+                  { authUser ?
+                 ((userInfo.id === authUser.userId)? (
                   <React.Fragment>
                     <Link className="button" to={`/courses/${course.id}/update`}>Update Course</Link>
                     <Link className="button" to="/" onClick={() => this.deleteCourse()}>Delete Course</Link>
                     <Link className="button" to="/">Return to List</Link>
-                  </React.Fragment>
-                  :
-                  <React.Fragment>
+                  </React.Fragment>) : 
+                  (<React.Fragment>
                     <Link className="button" to="/">Return to List</Link>
+                    
                   </React.Fragment>
-                }
+                  )): <Link className="button" to="/">Return to List</Link>
+                  }
               </div>
             </div>
             <div className="wrap">
