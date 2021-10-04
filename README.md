@@ -4,17 +4,17 @@ This application provides a way for users to administer a school database contai
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 
-![image info](images/courseHome.png)
+![image info](courseHome.png)
 
-![image info](images/createCourse.png)
+![image info](createCourse.png)
 
-![image info](images/CourseDetail.png)
+![image info](CourseDetail.png)
 
-![image info](images/update.png)
+![image info](update.png)
 
-![image info](images/signin.png)
+![image info](signin.png)
 
-![image info](images/signup.png)
+![image info](signup.png)
 # View Project
 1. Download this repo.
 2. Navigate to the project's api directory in the   command line/terminal.
